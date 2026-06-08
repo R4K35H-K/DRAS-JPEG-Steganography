@@ -1,7 +1,18 @@
-# DRAS (Downward Recompression Robust Steganography) - MATLAB Implementation
+# DRAS (Downward Robust Adaptive Steganography) - MATLAB Implementation
 
-This repository contains the official MATLAB implementation of the **DRAS** steganography scheme for JPEG images, as described in the paper:
-> **Dealing with downward recompression for robust steganography in high quality JPEG images** (Journal of Visual Communication and Image Representation, 2026)
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jvcir.2026.104817-blue)](https://doi.org/10.1016/j.jvcir.2026.104817) [![Cite](https://img.shields.io/badge/Cite-Paper-blue)](#citation) [![Google Scholar](https://img.shields.io/badge/Google_Scholar-Profile-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=vvfARToAAAAJ) [![MATLAB](https://img.shields.io/badge/MATLAB-R2020a%2B-blue.svg?logo=mathworks&logoColor=white)](https://www.mathworks.com/products/matlab.html)
+
+This repository contains the official MATLAB implementation of the **DRAS** steganography scheme for JPEG images, as presented in:
+
+> **Dealing with downward recompression for robust steganography in high quality JPEG images**
+> *(Journal of Visual Communication and Image Representation, 2026)*
+
+## Prerequisites
+
+To run the code in this repository, ensure your environment meets the following requirements:
+* **MATLAB** (R2020a or newer is recommended)
+This repository contains the official MATLAB implementation of the **DRAS** steganography scheme for JPEG images:
+
 
 ## Repository Structure
 
@@ -32,28 +43,6 @@ To keep the repository clean and portable, the root folder contains only the mai
 
 ---
 
-## Variable Mapping to Research Paper
-
-Variables in the codebase are named descriptively to map directly to the research paper concepts:
-
-| Research Concept | Paper Symbol | Variable Name |
-| :--- | :---: | :--- |
-| JPEG cover image | $\mathbf{X}_C$ | `CoverPath` |
-| JPEG stego image | $\mathbf{Y}$ | `StegoPath` |
-| Cover QDCT coefficients | $\mathbf{C}$ | `CoverQDCT` |
-| Cover quantization table | $\mathbf{Q}_C$ | `CoverQuantTable` |
-| Channel quantization table | $\mathbf{Q}_{Ch}$ | `ChannelQuantTable` |
-| Expected cover QDCT | $\mathbf{C}_{Ch}$ | `ExpectedCoverQDCT` |
-| Secret message bits | $\mathbf{m}$ | `SecretMsg` |
-| Extracted message bits | $\hat{\mathbf{m}}$ | `ExtractedMsg` |
-| Secret message length | $l$ | `MsgLen` |
-| Distortion costs (+1) | $\rho^+_i$ | `UndetectabilityCostP1` |
-| Distortion costs (-1) | $\rho^-_i$ | `UndetectabilityCostM1` |
-| Multiplier threshold | $T_h$ | `ExpansionThreshold` |
-| Selected STC cover indices | $\Psi$ | `STC_CoverIndices` |
-| STC sub-message lengths | - | `stc_n_msg_bits` |
-
----
 
 ## Configuration Options
 
